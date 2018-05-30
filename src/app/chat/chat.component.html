@@ -1,0 +1,9 @@
+<input [(ngModel)]="msg" type="text" name="msg" id="msg" (keyup)="convertToEmoji()" placeholder="Message...">
+<input type="submit" value="Send a message" (click)="addMsg()" (submit)="addMsg()">
+<ul *ngFor="let msg of messages | async">
+  <li>
+    <b>{{ msg.name }}</b>
+    <br>
+    {{ msg.msg }}
+  </li>
+</ul>

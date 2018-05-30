@@ -1,0 +1,8 @@
+<ng-container *ngIf="show">
+<span>Choose your nickname: </span>
+<input type="text" [(ngModel)]="nickname" name="name" id="name" placeholder="Nickname...">
+<input type="submit" routerLink="/chat" placeholder="Let's chat!" name="Lets chat" value="Let's chat" (click)="setName()">
+</ng-container>
+<router-outlet></router-outlet>
+
+
